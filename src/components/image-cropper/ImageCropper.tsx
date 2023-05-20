@@ -119,6 +119,13 @@ const ImageCropper = () => {
                 <div className={`mx-4 col-span-2 ${imgSrc && "border"}`}>
                     {
                         !!imgSrc && (
+                            <div className='my-4 text-right'>
+                                <button onClick={() => setImgSrc("")} className="btn btn-md text-white text-xl md:text-2xl font-semibold mr-4">X</button>
+                            </div>
+                        )
+                    }
+                    {
+                        !!imgSrc && (
                             <div className="Crop-Controls my-5">
                                 <CropTools
                                     scale={scale}
@@ -145,7 +152,7 @@ const ImageCropper = () => {
                                         ref={imgRef}
                                         alt="Crop me"
                                         src={imgSrc}
-                                        style={{ transform: `scale(${scale}) rotate(${rotate}deg)` }}
+                                        style={{ transform: `scale(${scale}) rotate(${rotate}deg)`, width: "300px", height: "250px" }}
                                         onLoad={onImageLoad}
                                     />
                                 </ReactCrop>
@@ -154,7 +161,7 @@ const ImageCropper = () => {
                     )}
                 </div>
                 <div className='mx-4 col-span-1'>
-                    {!!completedCrop && (
+                    {(!!completedCrop && !!imgSrc) && (
                         <div className='flex flex-col justify-center items-center '>
 
                             <CroppedImage

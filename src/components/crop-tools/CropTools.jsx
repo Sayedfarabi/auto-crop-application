@@ -5,7 +5,7 @@ const CropTools = ({ scale, imgSrc, setScale, rotate, setRotate, handleToggleAsp
         <div className='w-full'>
             <div className='flex justify-center items-center my-2'>
                 <div className='mx-3'>
-                    <label htmlFor="scale-input" className='text-xl font-semibold'>Scale: </label>
+                    <label htmlFor="scale-input" className='text-xl font-semibold'>Zoom: </label>
                 </div>
                 <div>
                     <input
