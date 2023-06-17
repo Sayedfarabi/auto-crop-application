@@ -17,10 +17,9 @@ const CroppedImage = ({ previewCanvasRef, completedCrop, onDownloadCropClick, hi
             </div>
             <div className='my-2 md:my-4'>
                 <div className='text-center'>
-                    <button className='btn btn-sm px-5 rounded-full bg-lime-500 capitalize' onClick={onDownloadCropClick}>Download</button>
+                    <button className='btn btn-sm px-5 rounded-full bg-blue-500 hover:bg-lime-500 capitalize' onClick={onDownloadCropClick}>Download</button>
                 </div>
                 <a
-
                     ref={hiddenAnchorRef}
                     download
                     style={{

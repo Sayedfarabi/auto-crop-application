@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
     return (
         <section>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -15,7 +15,7 @@ const Navbar = () => {
 
                 <div className="navbar-end">
                     <a href='#cropper'>
-                        <button className='btn bg-blue-500 btn-sm hover:text-lime-500'>Get Started</button>
+                        <button className='px-6 py-2 rounded-md bg-blue-500 hover:bg-lime-500 text-white font-semibold'>Get Started</button>
                     </a>
                 </div>
             </div>
